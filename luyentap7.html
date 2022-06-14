@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr = new Array(3)
+        arr[0] = +prompt('Nhập vào số nguyên thứ nhất')
+        arr[1] = +prompt('Nhập vào số nguyên thứ hai')
+        arr[2] = +prompt('Nhập vào số nguyên thứ ba')
+        function inputNum(){
+            for (i = 0; i < arr.length; i++){
+                let min = arr[i]
+                if (arr[i] > arr[i+1]){
+                    min = arr[i+1]
+                }
+                return min
+            }
+            
+        }
+        alert('Số nguyên nhỏ nhất trong các số ' + arr[0] + ', ' + arr[1] + ', ' + arr[2] + ' là ' + inputNum())
+    </script>
+</body>
+</html>

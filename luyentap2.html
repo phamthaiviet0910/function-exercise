@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input = prompt('Nhập vào tên ngôi sao')
+
+        let star1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+        let star2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+
+        function checkStar(){
+            for (i = 0; i < star1.length; i++){
+                if (input == star1[i]){
+                    return i;
+                } 
+            }
+        }
+        
+        if (checkStar()){
+            alert('Chòm sao tương ứng là: ' + star2[checkStar()])
+        } else {
+            alert('Ngôi sao bạn nhập không tồn tại')
+        }
+        
+    </script>
+</body>
+</html>

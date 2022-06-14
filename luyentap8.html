@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text">
+    <button id="check">Check</button>
+    <span id="result"></span>
+    <script>
+        let input = document.getElementById('input')
+        let check = document.getElementById('check')
+        let result = document.getElementById('result')
+        
+        function isInteger(inputValue){
+            return inputValue % 1 == 0 && inputValue > 0
+        }
+
+        check.addEventListener('click',function(){
+            inputValue = input.value 
+            if(isInteger(inputValue)){
+                result.innerHTML = inputValue + ' là số nguyên dương'
+            } else {
+                result.innerHTML = inputValue + ' không là số nguyên dương'
+            }
+        })
+    </script>
+</body>
+</html>
